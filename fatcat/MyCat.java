@@ -13,7 +13,13 @@ public class MyCat extends Cat
      */
     public void act()
     {
-       String input = Greenfoot.ask("Quieres que el gato este aburrido, 1 es si y 2 es no (solo pueden ser numeros)");
+    sleep(2);
+    if (isBored())
+    {
+    shoutHooray();
+    }
+        
+    String input = Greenfoot.ask("Quieres que el gato este aburrido, 1 es si y 2 es no (solo pueden ser numeros)");
        int answer = Integer.valueOf(input);
        if (answer == 1){
            setBored(true);
